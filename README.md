@@ -54,7 +54,6 @@ mysql -u root -p gear_inventory < data/schema.sql
 ## Usage
 The ProductIndexer class fetches product data from the database and applies filters based on country, language, and currency. Products are instances of SimpleInventory or subclasses such as DigitalProduct or PhysicalProduct.
 
-The ProductController demonstrates a basic web interface controller pulling filtered products and rendering via templates.
 ---
 ## Project Structure
 
