@@ -1,0 +1,32 @@
+{
+    "name": "gear4music/inventory-system",
+    "description": "Test task for Gear4music",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anna Sumtsova",
+            "email": "sumtsova.anna@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "stichoza/google-translate-php": "^5.3",
+        "florianv/exchanger": "^2.8",
+        "php-http/curl-client": "^2.3",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
