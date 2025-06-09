@@ -19,7 +19,10 @@
         "stichoza/google-translate-php": "^5.3",
         "florianv/exchanger": "^2.8",
         "php-http/curl-client": "^2.3",
-        "vlucas/phpdotenv": "^5.6"
+        "vlucas/phpdotenv": "^5.6",
+        "umpirsky/country-list": "^2.0",
+        "alcohol/iso4217": "^4.2",
+        "umpirsky/language-list": "^1.1"
     },
     "config": {
         "allow-plugins": {

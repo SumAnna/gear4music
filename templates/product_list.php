@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= htmlspecialchars($data['lang']) ?>">
+<html lang="<?= htmlspecialchars($data['lang'] ?? 'en') ?>">
 <head>
     <meta charset="UTF-8">
     <title>Inventory</title>
@@ -13,9 +13,9 @@
 </head>
 <body>
 <h1>
-    Products available in <?= htmlspecialchars($data['country']) ?>
-    (Language: <?= htmlspecialchars($data['lang']) ?>,
-    Currency: <?= htmlspecialchars($data['currency']) ?>)
+    Products available in <?= htmlspecialchars($data['country'] ?? 'GB') ?>
+    (Language: <?= htmlspecialchars($data['lang'] ?? 'en') ?>,
+    Currency: <?= htmlspecialchars($data['currency'] ?? 'GBP') ?>)
 </h1>
 
 <?php if (empty($data['products'])): ?>
@@ -24,11 +24,11 @@
     <ul>
         <?php foreach ($data['products'] as $product): ?>
             <li>
-                <strong><?= htmlspecialchars($product['name']) ?></strong><br>
-                <span class="price"><?= htmlspecialchars($data['currency']) ?> <?= htmlspecialchars($product['price']) ?></span><br>
-                Type: <?= htmlspecialchars($product['type']) ?> |
-                Condition: <?= htmlspecialchars($product['condition']) ?> |
-                Stock: <?= htmlspecialchars($product['stock']) ?>
+                <strong><?= htmlspecialchars($product['name'] ?? '') ?></strong><br>
+                <span class="price"><?= htmlspecialchars($data['currency'] ?? 'GBP') ?> <?= htmlspecialchars($product['price'] ?? '0.00') ?></span><br>
+                Type: <?= htmlspecialchars($product['type'] ?? '') ?> |
+                Condition: <?= htmlspecialchars($product['condition'] ?? '') ?> |
+                Stock: <?= htmlspecialchars($product['stock'] ?? '0') ?>
             </li>
         <?php endforeach; ?>
     </ul>
